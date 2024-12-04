@@ -1,0 +1,67 @@
+// Create a user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Finesiaa ",
+    "email": "Finesia@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "Admin"
+}
+
+###
+//get All Users
+GET http://localhost:3000/users
+
+###
+//get Single User
+GET http://localhost:3000/users/496bec5e-ff59-4958-b45f-5662244a8291
+
+###
+//update a user
+PATCH http://localhost:3000/users/496bec5e-ff59-4958-b45f-5662244a8291
+Content-Type: application/json
+
+{
+  "name": "Zayn Updated",
+  "email": "Zayn@gmail.com",
+  "password": "",
+  "confPassword": "",
+  "role": "User"
+}
+
+###
+//Delete a user
+DELETE http://localhost:3000/users/496bec5e-ff59-4958-b45f-5662244a8291
+
+###
+//Login User
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "zayn@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:3000/me
+
+###
+DELETE http://localhost:3000/logout
+
+
+###
+//Get All Products
+GET http://localhost:3000/products
+
+###
+// Post data Products
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "price": 997
+}
